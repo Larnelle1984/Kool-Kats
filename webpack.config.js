@@ -2,39 +2,35 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
-  mode: 'development', // 'production' for production builds
-  entry: './src/index.tsx', // Your main entry point
+  mode: process.env.NODE_ENV || 'development',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: './', // Needed for React Router if you use it later
+    publicPath: '/',
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx'], // Resolve these extensions
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/, // Rule for TypeScript and TSX files
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'ts-loader',
-          options: {
-            transpileOnly: false, // Ensure ts-loader emits output
-          },
+          options: { transpileOnly: false },
         },
       },
       {
-        test: /\.css$/, // Rule for CSS files
-        use: [
-          'style-loader',      // Injects CSS into the DOM
-          'css-loader',        // Interprets @import and url()
-          'postcss-loader',    // Processes CSS with PostCSS and Tailwind
-        ],
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(js|jsx)$/, // Rule for JavaScript and JSX files
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -44,32 +40,29 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|jpeg|gif|mp4|webm)$/, // Rule for images and videos
+        test: /\.(png|jpg|jpeg|gif|mp4|webm)$/,
         use: [
           {
             loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/',
-            },
+            options: { name: '[name].[ext]', outputPath: 'assets/' },
           },
         ],
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(), // Cleans the 'dist' folder before each build
+    ...(isProd ? [new CleanWebpackPlugin()] : []),
     new HtmlWebpackPlugin({
-      template: './public/index.html', // Path to your HTML template
+      template: './public/index.html',
       filename: 'index.html',
     }),
   ],
   devServer: {
-    static: path.join(__dirname, 'public'), // Serve static files from 'public'
+    static: path.join(__dirname, 'public'),
     compress: true,
     port: 3000,
-    open: true, // Automatically open the browser
-    hot: true,  // Enable Hot Module Replacement
-    historyApiFallback: true, // For client-side routing (React Router)
+    open: true,
+    hot: true,
+    historyApiFallback: true,
   },
 };
