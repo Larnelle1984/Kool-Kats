@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/', // Needed for React Router if you use it later
+    publicPath: './', // Needed for React Router if you use it later
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'], // Resolve these extensions

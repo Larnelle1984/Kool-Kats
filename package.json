@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Larnelle1984/Geomosfilms/issues"
   },
-  "homepage": "https://github.com/Larnelle1984/Geomosfilms#readme",
+  "homepage": ".",
   "devDependencies": {
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
