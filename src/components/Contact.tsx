@@ -10,7 +10,7 @@ export default function Contact() {
     {
       icon: <FaMapMarkerAlt />,
       label: 'Location:',
-      text: '14 Hope Street, Cape Town, Western Cape 8001',
+      text: '30 Hofmeyer Street, Parow Valley, Western Cape, 7500',
     },
     {
       icon: <FaClock />,
@@ -20,12 +20,12 @@ export default function Contact() {
     {
       icon: <FaEnvelope />,
       label: 'Email:',
-      text: 'info@example.com',
+      text: 'Koolkatzmedia@gmail.com',
     },
     {
       icon: <FaPhone />,
       label: 'Call:',
-      text: '+27658300550',
+      text: '+27 72 420 6271',
     },
   ];
 
@@ -59,7 +59,7 @@ export default function Contact() {
       <div data-aos="fade-up" className="my-8">
         <iframe
           className="w-full h-[350px] border-0"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3407834226005!2d18.418596760584453!3d-33.93236218065579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6781e1071b21%3A0x100554eaf08eb14f!2s105%20Hope%20St%2C%20Gardens%2C%20Cape%20Town%2C%208001!5e0!3m2!1sen!2sza!4v1738944930824!5m2!1sen!2sza"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.1944050309294!2d18.586638775439678!3d-33.910395821214045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5a5f424f7053%3A0x783cb03a95227884!2s30%20Hofmeyer%20St%2C%20Parow%20Valley%2C%20Cape%20Town%2C%207500!5e0!3m2!1sen!2sza!4v1755509569621!5m2!1sen!2sza"
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"

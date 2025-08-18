@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-neutralDark text-white py-8">
       {/* Bottom text */}
       <div className="text-center text-xs text-gray-400 mt-6">
-        &copy; {new Date().getFullYear()} Kool kats. All rights reserved.
+        &copy; {new Date().getFullYear()} Kool katz. All rights reserved.
       </div>
     </footer>
   );

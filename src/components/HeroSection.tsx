@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-start md:ml-7 md:mt-60 mt-64 h-full px-6 md:px-16 text-lighter">
         <h1 className="md:text-6xl text-4xl md:ml-20 font-bold sm:mb-6">
-          Kool Kats Captures It All,
+          Kool Katz Captures It All,
           <br />
           Weddings, Brands & Beats
         </h1>

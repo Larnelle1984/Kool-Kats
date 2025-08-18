@@ -18,7 +18,7 @@ const BiographySection: React.FC = () => {
         <h1 className="md:text-6xl text-4xl md:ml-20 font-bold sm:mb-6">
           Weddings. Brands. Beats.
           <br />
-          This Is Kool Kats.
+          This Is Kool Katz.
         </h1>
       </div>
     </section>
