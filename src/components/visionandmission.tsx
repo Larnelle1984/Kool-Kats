@@ -55,7 +55,7 @@ const VisionAndMission: React.FC = () => {
             </h4>
             <p className="text-base text-gray-300">
               Athini Dubula is a passionate photographer with a keen eye for
-              capturing authentic moments. From portraits to events, his work
+              capturing authentic moments. From portraits to events, her work
               blends creativity and precision, turning fleeting scenes into
               timeless memories.
             </p>
